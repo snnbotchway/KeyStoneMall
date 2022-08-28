@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+frontend/node_modules
 
 # C extensions
 *.so
