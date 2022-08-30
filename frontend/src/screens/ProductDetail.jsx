@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import {
     Col,
     Row,
@@ -11,11 +13,18 @@ import {
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Rating from "../components/Rating";
-import products from "../products";
 
 function ProductDetail() {
+    const [product, setProduct] = useState([]);
     const { id } = useParams();
-    const product = products.find(x => x._id === id);
+
+    useEffect(() => {
+        async function getProduct() {
+            const { data } = await axios.get(`/api/products/${id}`);
+            setProduct(data);
+        }
+        getProduct();
+    }, []);
 
     return (
         <div>
