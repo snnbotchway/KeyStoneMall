@@ -5,3 +5,8 @@ main {
 .rating span {
     margin: 0.1rem;
 }
+
+.photo {
+    height: 200px;
+    width: 200px;
+}

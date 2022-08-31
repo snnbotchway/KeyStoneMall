@@ -65,7 +65,7 @@ function ProductDetail() {
                                     <Col md={5}>Price:</Col>
                                     <Col md={7}>
                                         <span style={{ fontWeight: "bold" }}>
-                                            {product.price}
+                                            GHc{product.price}
                                         </span>
                                     </Col>
                                 </Row>
