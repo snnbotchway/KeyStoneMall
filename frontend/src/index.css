@@ -6,7 +6,11 @@ main {
     margin: 0.1rem;
 }
 
-.photo {
-    height: 200px;
-    width: 200px;
+@media screen and (min-width: 765px) {
+    .photo {
+        height: 205px;
+    }
+    .card1 {
+        height: 431.22px;
+    }
 }

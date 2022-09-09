@@ -29,8 +29,8 @@ def getProducts(request):
     # result_page = paginator.paginate_queryset(contacts, request)
     # serializer = ProductSerializer(result_page, many=True)
     # return paginator.get_paginated_response(serializer.data)
-    product = Product.objects.all()
-    serializer = ProductSerializer(product, many=True)
+    products = Product.objects.all()
+    serializer = ProductSerializer(products, many=True)
     return Response(serializer.data)
 
 

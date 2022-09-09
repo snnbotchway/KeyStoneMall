@@ -6,13 +6,13 @@ import { Link } from "react-router-dom";
 function ProductCard({ product }) {
     return (
         <div>
-            <Card className="my-3 rounded p-3">
+            <Card className="my-3 rounded p-3 card1">
                 <Link to={`/product/${product._id}`}>
                     <Card.Img className="photo" src={product.image} />
                 </Link>
                 <Card.Body>
                     <Link to={`/product/${product._id}`}>
-                        <Card.Title as="div">
+                        <Card.Title as="div" style={{ height: "50px" }}>
                             <span style={{ fontWeight: "bold" }}>
                                 {product.name}
                             </span>

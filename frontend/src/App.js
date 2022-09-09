@@ -5,6 +5,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductDetail from "./screens/ProductDetail";
 import { Container } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import CartScreen from "./screens/CartScreen";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                             path="/product/:id"
                             element={<ProductDetail />}
                         />
+                        <Route path="/cart" element={<CartScreen />} />
                     </Routes>
                 </Container>
             </main>
