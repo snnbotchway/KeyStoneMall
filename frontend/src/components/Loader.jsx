@@ -5,12 +5,13 @@ function Loader() {
     return (
         <Spinner
             style={{
-                width: "120px",
-                height: "120px",
-                margin: "10vh auto",
+                width: "100px",
+                height: "100px",
+                margin: "auto",
                 display: "block",
             }}
             animation="grow"
+            role="status"
         >
             <span className="sr-only">Loading...</span>
         </Spinner>

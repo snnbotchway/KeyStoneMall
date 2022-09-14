@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import { Col, Row, Image, ListGroup, Button, Form } from "react-bootstrap";
 import Message from "../components/Message";
@@ -9,14 +9,12 @@ import { addToCart, removeFromCart } from "../actions/cartActions";
 
 function CartScreen() {
     const dispatch = useDispatch();
-
-    console.log("render");
+    const navigate = useNavigate();
 
     const cartScreenInfo = useSelector(state => state.cartScreenInfo);
     const { cartItems } = cartScreenInfo;
 
     const removeFromCartHandler = id => {
-        console.log("remove: ", id);
         dispatch(removeFromCart(id));
     };
 
@@ -125,7 +123,7 @@ function CartScreen() {
                             </ListGroup.Item>
                             <ListGroup.Item>
                                 <Button
-                                    // onClick={proceedToCheckout}
+                                    onClick={() => navigate("/shipping")}
                                     className="btn-block"
                                     style={{ width: "-webkit-fill-available" }}
                                 >

@@ -2,24 +2,8 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.pagination import PageNumberPagination
 
-from .models import *
-from .serializers import *
-
-@api_view(['GET'])
-def getRoutes(request):
-    routes=[
-        '/api/',
-        '/api/products/',
-        '/api/product/<int:pk>',
-        '/api/products/create/',
-        '/api/products/upload/',
-        '/api/products/<int:pk>/reviews/',
-        '/api/products/top/',
-        '/api/products/<int:pk>',
-        '/api/products/delete/<int:pk>/',
-        '/api/products/update/<int:pk>/',
-    ]
-    return Response(routes)
+from ..models import Product
+from ..serializers import ProductSerializer
 
 @api_view(['GET'])
 def getProducts(request):
