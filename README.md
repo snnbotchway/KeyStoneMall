@@ -1,2 +1,2 @@
 # KeyStoneMall
-E-commerse site
+E-commerse site with React and Django
